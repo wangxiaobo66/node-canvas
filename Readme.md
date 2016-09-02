@@ -1,7 +1,7 @@
 node-canvas
 ===========
 ### Canvas graphics API backed by Cairo   
-Canvas API由Cairo支持。
+Canvas API由Cairo支持.
 
 [![Build Status](https://travis-ci.org/Automattic/node-canvas.svg?branch=master)](https://travis-ci.org/Automattic/node-canvas)
 [![NPM version](https://badge.fury.io/js/canvas.svg)](http://badge.fury.io/js/canvas)
@@ -22,8 +22,10 @@ $ npm install canvas
 ```
 
 Unless previously installed you'll _need_ __Cairo__. For system-specific installation view the [Wiki](https://github.com/Automattic/node-canvas/wiki/_pages).
+除非预先安装过你将需要的Cairo.对于特定的安装请查看.
 
 You can quickly install the dependencies by using the command for your OS:
+你可以使用OS命令为你的操作系统快速的安装依赖关系.
 
 OS | Command
 ----- | -----
@@ -34,6 +36,7 @@ Solaris | `pkgin install cairo pkg-config xproto renderproto kbproto xextproto`
 Windows | [Instructions on our wiki](https://github.com/Automattic/node-canvas/wiki/Installation---Windows)
 
 **El Capitan users:** If you have recently updated to El Capitan and are experiencing trouble when compiling, run the following command: `xcode-select --install`. Read more about the problem [on Stack Overflow](http://stackoverflow.com/a/32929012/148072).
+如果你最近更新遇到问题,请运行以下命令：`xcode-select --install`.
 
 ## Screencasts
 
@@ -62,12 +65,15 @@ console.log('<img src="' + canvas.toDataURL() + '" />');
 ```
 
 ## Non-Standard API
+非标准API
 
  node-canvas extends the canvas API to provide interfacing with node, for example streaming PNG data, converting to a `Buffer` instance, etc. Among the interfacing API, in some cases the drawing API has been extended for SSJS image manipulation / creation usage, however keep in mind these additions may fail to render properly within browsers.
+node-canvas为用户提供了扩展的API接口,例如png数据流,转化为‘buffer’等实例.这些接口目前可以使用,但是这些额外添加的东西以后可能会失效.
 
 ### Image#src=Buffer
 
  node-canvas adds `Image#src=Buffer` support, allowing you to read images from disc, redis, etc and apply them via `ctx.drawImage()`. Below we draw scaled down squid png by reading it from the disk with node's I/O.
+node-canvas增加了`Image#src=Buffer`的支持.
 
 ```javascript
 fs.readFile(__dirname + '/images/squid.png', function(err, squid){
