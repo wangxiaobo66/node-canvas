@@ -1,6 +1,7 @@
 node-canvas
 ===========
 ### Canvas graphics API backed by Cairo
+Canvas API由Cairo支持。
 [![Build Status](https://travis-ci.org/Automattic/node-canvas.svg?branch=master)](https://travis-ci.org/Automattic/node-canvas)
 [![NPM version](https://badge.fury.io/js/canvas.svg)](http://badge.fury.io/js/canvas)
 
